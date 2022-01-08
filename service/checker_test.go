@@ -1,4 +1,4 @@
-package basic_test
+package service_test
 
 import (
 	"testing"
@@ -33,7 +33,7 @@ func TestAssertNumber(t *testing.T) {
 			"Fizz Buzz",
 		},
 	}
-	checker := basic.NewFizzBuzzChecker()
+	checker := service.NewFizzBuzzChecker()
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := checker.AssertNumber(tt.arg); got != tt.want {
@@ -55,7 +55,7 @@ func TestCheckSequence(t *testing.T) {
 			"1,2,Fizz,4,Buzz",
 		},
 	}
-	checker := basic.NewFizzBuzzChecker()
+	checker := service.NewFizzBuzzChecker()
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := checker.CheckSequence(tt.arg); got != tt.want {
